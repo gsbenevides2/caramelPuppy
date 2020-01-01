@@ -5,7 +5,7 @@ module.exports = (app,credential,logGetter,deleteAll)=>{
 	app = require("express")()
  }
  if(!credential) credential = "null"
- app.get("/slogger",(req,res)=>{
+ app.get("/caramelPuppy",(req,res)=>{
 	if(req.query.credential !== credential){
 	 res.status(401).send("Invalid Credential")
 	}
@@ -13,16 +13,16 @@ module.exports = (app,credential,logGetter,deleteAll)=>{
 	 res.sendFile(__dirname+"/public/index.html")
 	}
  })
- app.get("/slogger/json-viewer.js",(req,res)=>{
+ app.get("/caramelPuppy/json-viewer.js",(req,res)=>{
 	res.sendFile(__dirname+"/public/json-viewer.js")
  })
- app.get("/slogger/json-viewer.css",(req,res)=>{
+ app.get("/caramelPuppy/json-viewer.css",(req,res)=>{
 	res.sendFile(__dirname+"/public/json-viewer.css")
  })
- app.get("/slogger/scripts.js",(req,res)=>{
+ app.get("/caramelPuppy/scripts.js",(req,res)=>{
 	res.sendFile(__dirname+"/public/scripts.js")
  })
- app.get("/slogger/data",(req,res)=>{
+ app.get("/caramelPuppy/data",(req,res)=>{
 	if(req.query.credential !== credential){
 	 res.status(401).send("Invalid Credential")
 	}
@@ -30,7 +30,7 @@ module.exports = (app,credential,logGetter,deleteAll)=>{
 	 res.send(logGetter())
 	}
  })
- app.get("/slogger/deleteAll",(req,res)=>{
+ app.get("/caramelPuppy/deleteAll",(req,res)=>{
 	if(req.query.credential !== credential){
 	 res.status(401).send("Invalid Credential")
 	}
@@ -39,5 +39,4 @@ module.exports = (app,credential,logGetter,deleteAll)=>{
 	 res.send("Ok")
 	}
  })
-
 }

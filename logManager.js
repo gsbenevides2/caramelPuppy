@@ -3,10 +3,10 @@ const chalk = require("chalk")
 module.exports ={
  saverFunction:null,
  fileName:null,
- sloggerJson:null,
+ caramelPuppyJson:null,
  deleteAll(){
-	this.sloggerJson.logs = []
-	this.saveFunction(this.sloggerJson)
+	this.caramelPuppyJson.logs = []
+	this.saveFunction(this.caramelPuppyJson)
  },
  showLog(logData){
 	switch(logData.type){
@@ -35,7 +35,7 @@ module.exports ={
 			JSON.stringify(arg)
 		 }
 		 catch(e){
-			message = `Slogger:Error making JSON.stringify() from argument ${pos}. Avoid using complex objects with Date, Url etc.`
+			message = `CaramelPuppy:Error making JSON.stringify() from argument ${pos}. Avoid using complex objects with Date, Url etc.`
 			console.error(message)
 			return ""
 		 }
@@ -48,7 +48,7 @@ module.exports ={
 	}
 	if(showLogTypes.includes(logData.type)) this.showLog(logData)
 	logData.fileName = this.fileName
-	this.sloggerJson.logs.push(logData)
-	this.saveFunction(this.sloggerJson)
+	this.caramelPuppyJson.logs.push(logData)
+	this.saveFunction(this.caramelPuppyJson)
  }
 }

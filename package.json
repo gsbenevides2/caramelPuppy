@@ -1,10 +1,10 @@
 {
- "name": "slogger",
+ "name": "caramelPuppy",
  "version": "1.0.0",
  "readmeFilename":"readme.md",
  "description": "Intelligent log manager.",
  "main": "index.js",
- "repository": "https://github.com/gsbenevides2/slogger",
+ "repository": "https://github.com/gsbenevides2/caramelPuppy",
  "author": "gsbenevides2",
  "license": "MIT",
  "dependencies": {

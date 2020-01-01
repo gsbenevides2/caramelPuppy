@@ -1,8 +1,8 @@
 const path = require("path")
 
-const expressSetup = require("./sloggerExpress")
-const sloggerJson = require("./sloggerJson")
-const sloggerRequest = require("./sloggerRequest")
+const expressSetup = require("./caramelPuppyExpress")
+const caramelPuppyJson = require("./caramelPuppyJson")
+const caramelPuppyRequest = require("./caramelPuppyRequest")
 const logManager = require("./logManager")
 const {getTime} = require("./utils")
 
@@ -17,15 +17,15 @@ module.exports = function(config={}){
 	expressSetup(config.express,c=>{
 	 logManager.saveLog(c)
 	},()=>{
-	 logManager.sloggerJson = sloggerJson.load()
-	 return logManager.sloggerJson
+	 logManager.caramelPuppyJson = caramelPuppyJson.load()
+	 return logManager.caramelPuppyJson
 	},()=>{
 	 logManager.deleteAll()
 	})
  }
- logManager.sloggerJson = sloggerJson.load()
+ logManager.caramelPuppyJson = caramelPuppyJson.load()
  logManager.saveFunction =(content)=>{
-	sloggerJson.save(content)
+	caramelPuppyJson.save(content)
  }
  function log(){
 	const logData = {
@@ -44,7 +44,7 @@ module.exports = function(config={}){
  }
  return {
 	log,
-	request:sloggerRequest(config.request,logData=>{
+	request:caramelPuppyRequest(config.request,logData=>{
 	 logManager.saveLog(logData)
 	}),
 	appStart}

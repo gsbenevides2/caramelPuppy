@@ -1,6 +1,6 @@
-# Slogger
+# CaramelPuppy
 
-Slogger is an intelligent log manager, it allows to save the logs in a slogger.json file in the project root.  Integration with express and credential protected web interface for log viewing.
+CaramelPuppy is an intelligent log manager, it allows to save the logs in a caramelPuppy.json file in the project root.  Integration with express and credential protected web interface for log viewing.
 
 ## Content Guide
 - [Configuration](#configuration)
@@ -14,32 +14,32 @@ Slogger is an intelligent log manager, it allows to save the logs in a slogger.j
 
 ## Configuration
 
-First install the Slogger package
+First install the caramelPuppy package
 - Via Node Package Manager (NPM):
 ```
-npm install slogger
+npm install caramelPuppy
 ```
 - Via yarn:
 ```
-yarn add slogger
+yarn add caramelPuppy
 ```
 
-Then import Slogger into your project:
+Then import caramelPuppy into your project:
 ```js
-const slogger = require("slogger")({
+const caramelPuppy = require("caramelPuppy")({
     __filename
 })
 ```
-The code above is enough for Slogger to work.  The `__filename` parameter is Node's own variable, which tells which file that code is being run.
+The code above is enough for caramelPuppy to work.  The `__filename` parameter is Node's own variable, which tells which file that code is being run.
 
 ## Use
 
-After the setup is a success.  The slogger will return some functions.
-- [slogger.log()](#sloggerlog)
-- [slogger.request()](#request)
-- [slogger.appStart()](#sloggerappstart)
-### slogger.log()
-Similar to the `console.log()` function it takes a number of parameters.  And save it to the slogger.json log array like this:
+After the setup is a success.  The caramelPuppy will return some functions.
+- [caramelPuppy.log()](#caramelPuppylog)
+- [caramelPuppy.request()](#request)
+- [caramelPuppy.appStart()](#caramelPuppyappstart)
+### caramelPuppy.log()
+Similar to the `console.log()` function it takes a number of parameters.  And save it to the caramelPuppy.json log array like this:
 ```js
 {
     date:"2019-12-11 10:12:12",
@@ -51,9 +51,9 @@ Similar to the `console.log()` function it takes a number of parameters.  And sa
 And will display on the console:
 
 <span style="background-color:blue;color:Black;">LOG</span> Hello World
-### slogger.appStart()
+### caramelPuppy.appStart()
 Useful to know when your app started.
-In slogger.json:
+In caramelPuppy.json:
 ```js
 {
     filename:"index.js",
@@ -65,14 +65,14 @@ And will not display anything on the console.
 
 ## Express
 
-Slogger uses express middleware to intercept requests and save the http method, status code, and URL.
+CaramelPuppy uses express middleware to intercept requests and save the http method, status code, and URL.
 By default the information will only be saved at the end of the request.
 > Not required to use Express.
 ### Configuration
 ```js
 const express = require("express")
 const app = express()
-const slogger = require("slogger")({
+const caramelPuppy = require("caramelPuppy")({
     __filename,
     express:app
 })
@@ -88,21 +88,21 @@ End means the request has been terminated.
 > In the future with the implementation of trace it will be easier to monitor the logs that happened in a request.
 ### Web interface connection
 
-Slogger provides a web interface to view logs simply and securely.
+CaramelPuppy provides a web interface to view logs simply and securely.
 Setting this interface requires setting an environment variable, so you can create the `.env` file in the root:
 ```
-SLOGGER_KEY=exemple
+CARAMELPUPPY_KEY=exemple
 ```
-When creating this file, Slogger uses [dotenv](https://www.npmjs.com/package/dotenv) to read it.  So just go to url: http://mydomin.com/slogger?credential=example
+When creating this file, caramelPuppy uses [dotenv](https://www.npmjs.com/package/dotenv) to read it.  So just go to url: http://mydomin.com/caramelPuppy?credential=example
 
 ## Request
 
-`Slogger.request(req)` receives the request req as a parameter:
+`caramelPuppy.request(req)` receives the request req as a parameter:
 ```js
 request("google.com",{
 	time:true //Passing time: true will save elapsedTime
 },(err,req,body)=>{
-	slogger.request(req)
+	caramelPuppy.request(req)
 })
 ```
 And will display on the console:

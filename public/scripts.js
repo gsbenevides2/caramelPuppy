@@ -24,7 +24,7 @@ const dropdown = new Vue({
 	deletar(){
 	 if(confirm("Tem certeza?\nEssa ação é irreversivel!!")){
 		const credential = (new URL(window.location.href)).searchParams.get("credential")
-		fetch(`/slogger/deleteAll?credential=${credential}`)
+		fetch(`/caramelPuppy/deleteAll?credential=${credential}`)
 		 .then(loadLogs)
 	 }
 	 else{}
@@ -148,7 +148,7 @@ const log = new Vue({
 })
 function loadLogs(){
  const credential = (new URL(window.location.href)).searchParams.get("credential")
- fetch(`/slogger/data?credential=${credential}`)
+ fetch(`/caramelPuppy/data?credential=${credential}`)
 	.then(async res=>{
 	 logs.list = (await res.json()).logs.reverse()
 	})
