@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+	<script src="//cdn.jsdelivr.net/npm/eruda"></script><script>eruda.init();</script>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Slogger Dashboard</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="slogger/json-viewer.js"></script>
+	<link rel="stylesheet" href="slogger/json-viewer.css"/>
+	<script defer src="slogger/scripts.js"></script>
+	<style>
+.row{
+ padding:10px;
+}
+.center-align{
+ text-align: center !important;
+}
+.btn-flat{
+ display:inline-block !important;
+}
+table {
+  max-width: 100%;
+}
+table td {
+  word-break: break-all;
+}
+	</style>
+ </head>
+ <body>
+	<div id="dropdown"></div>
+	<div id="navbar"></div>
+	<div id="logs"></div>
+	<div id="log"></div>
+ </body>
+</html>

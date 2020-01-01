@@ -1,0 +1,17 @@
+{
+ "name": "slogger",
+ "version": "1.0.0",
+ "description": "Intelligent log manager.",
+ "main": "index.js",
+ "repository": "https://github.com/gsbenevides2/slogger",
+ "author": "gsbenevides2",
+ "license": "MIT",
+ "dependencies": {
+	"chalk": "^3.0.0",
+	"dotenv": "^8.2.0"
+ },
+ "keywords":[
+	"log manager",
+	"log"
+ ]
+}
