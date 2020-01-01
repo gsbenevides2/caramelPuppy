@@ -17,16 +17,16 @@ CaramelPuppy é um gerente de log inteligente, possibilita salvar os logs em um 
 Primeiro instale o pacote do caramelPuppy
 - Via NPM(Gerenciador de Pacotes do Node):
 ```
-npm install caramelPuppy
+npm install caramel-puppy
 ```
 - Via yarn:
 ```
-yarn add caramelPuppy
+yarn add caramel-puppy
 ```
 
 Depois importe o caramelPuppy em seu projeto:
 ```js
-const caramelPuppy = require("caramelPuppy")({
+const caramelPuppy = require("caramel-puppy")({
     __filename
 })
 ```
@@ -72,7 +72,7 @@ Por padrão as informações só serão salvas no final da requisição.
 ```js
 const express = require("express")
 const app = express()
-const caramelPuppy = require("caramelPuppy")({
+const caramelPuppy = require("caramel-puppy")({
     __filename,
     express:app
 })
