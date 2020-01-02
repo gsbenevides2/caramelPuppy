@@ -6,7 +6,7 @@ module.exports = function(setupReceived={},saveLog){
  return function(req){
 	const {statusCode} = req
 	const {method} = req.request
-	const url = req.request.url.href
+	const url = req.request.href
 	const logData = {
 	 date:getTime(),
 	 type:"Request",

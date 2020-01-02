@@ -1,6 +1,6 @@
 {
  "name": "caramel-puppy",
- "version": "1.0.0",
+ "version": "1.0.1",
  "readmeFilename":"readme.md",
  "description": "Intelligent log manager.",
  "main": "index.js",

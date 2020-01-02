@@ -109,6 +109,17 @@ And will display on the console:
 
 <span style='background-color:#ff2eff; color:black;'>Request</span> GET 200 google.com
 
+## ChangeLog
+
+- 1.0.0: Initial release
+- 1.0.1: Fixed error looking for href from url in request
+
+## Contributors
+
+- [Patrícia Garbe Carvalho](https://www.facebook.com/profile.php?id=100009279859979): Helped you choose the name caramelPuppy
+
+My sincere and thank you to all who contributed.
+
 ## Contributions
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests to us.
