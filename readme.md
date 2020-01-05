@@ -1,4 +1,4 @@
-# CaramelPuppy
+# CaramelPuppy 🐕🐶
 
 CaramelPuppy is an intelligent log manager, it allows to save the logs in a caramelPuppy.json file in the project root.  Integration with express and credential protected web interface for log viewing.
 

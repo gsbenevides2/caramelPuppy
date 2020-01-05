@@ -8,21 +8,21 @@
  "author": "gsbenevides2",
  "license": "MIT",
  "dependencies": {
-	"chalk": "^3.0.0",
-	"dotenv": "^8.2.0"
+  "chalk": "^3.0.0",
+  "dotenv": "^8.2.0"
  },
  "keywords": [
-	"log manager",
-	"log"
+  "log manager",
+  "log"
  ],
  "devDependencies": {
-	"@commitlint/cli": "^8.3.4",
-	"@commitlint/config-conventional": "^8.3.4",
-	"husk": "^0.5.3"
+  "@commitlint/cli": "^8.3.4",
+  "@commitlint/config-conventional": "^8.3.4",
+  "husky": "^3.1.0"
  },
  "husky": {
-	"hooks": {
-	 "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-	}  
+  "hooks": {
+   "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+  }
  }
 }
