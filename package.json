@@ -1,7 +1,7 @@
 {
  "name": "caramel-puppy",
  "version": "1.0.1",
- "readmeFilename":"readme.md",
+ "readmeFilename": "readme.md",
  "description": "Intelligent log manager.",
  "main": "index.js",
  "repository": "https://github.com/gsbenevides2/caramelPuppy",
@@ -11,8 +11,18 @@
 	"chalk": "^3.0.0",
 	"dotenv": "^8.2.0"
  },
- "keywords":[
+ "keywords": [
 	"log manager",
 	"log"
- ]
+ ],
+ "devDependencies": {
+	"@commitlint/cli": "^8.3.4",
+	"@commitlint/config-conventional": "^8.3.4",
+	"husk": "^0.5.3"
+ },
+ "husky": {
+	"hooks": {
+	 "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+	}  
+ }
 }
