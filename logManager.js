@@ -17,7 +17,12 @@ module.exports ={
 		console.log(chalk.bgYellow.black("Express"),logData.period,logData.method,logData.url,logData.statusCode || "")
 		break;	
 	 case "Request":
-		console.log(chalk.bgMagenta.black("Request"),logData.method,logData.statusCode,logData.url)
+		if(logData.error){
+		 console.log(chalk.bgMagenta.black("Request"),"Error!!!")
+		}
+		else{
+		 console.log(chalk.bgMagenta.black("Request"),logData.method,logData.statusCode,logData.url)
+		}
 		break;	
 	}
  },
