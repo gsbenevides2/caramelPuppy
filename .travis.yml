@@ -1,6 +1,8 @@
 language: node_js
 node_js:
  - "10"
+script:
+ - echo "Publishing"
 deploy:
  provider: npm
  email: "$NPM_EMAIL"
