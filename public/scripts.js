@@ -58,7 +58,7 @@ const logs = new Vue({
 		appStart:"appStart",
 		Express:`${log.method} ${log.url}`,
 		log: `${log.logArguments?log.logArguments.join(" ") : ""}`,
-		Request:`${log.method} ${log.url}`
+		Request:`${log.error ? "Request error" : log.method + "" + log.url}`
 	 }
 	 return types[log.type]
 	}
