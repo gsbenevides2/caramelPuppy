@@ -3,20 +3,23 @@ module.exports = function(setupReceived={},saveLog){
  const setup = {
 	saveBody:setupReceived.saveBody || false
  }
- return function(req){
-	const {statusCode} = req
-	const {method} = req.request
-	const url = req.request.href
+ return function(req,error){
 	const logData = {
 	 date:getTime(),
 	 type:"Request",
-	 statusCode,method,url
+	 error
 	}
-	if(req.elapsedTime){
-	 logData.elapsedTime = req.elapsedTime
-	}
+
+	if(req){
+	 logData.statusCode = req.statusCode
+	 logData.method = req.request.method
+	 logData.url = req.request.href
+	 if(req.elapsedTime){
+		logData.elapsedTime = req.elapsedTime
+	 }/*
 	if(statusCode !== 200 || setup.saveBody){
 	 logData.body = req.body
+	}*/
 	}
 	saveLog(logData)
  }

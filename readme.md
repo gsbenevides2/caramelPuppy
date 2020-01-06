@@ -97,12 +97,12 @@ When creating this file, caramelPuppy uses [dotenv](https://www.npmjs.com/packag
 
 ## Request
 
-`caramelPuppy.request(req)` receives the request req as a parameter:
+`caramelPuppy.request(req)` receives the request req and error as a parameter:
 ```js
 request("google.com",{
 	time:true //Passing time: true will save elapsedTime
 },(err,req,body)=>{
-	caramelPuppy.request(req)
+	caramelPuppy.request(req,err)
 })
 ```
 And will display on the console:
