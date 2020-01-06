@@ -3,7 +3,7 @@
 ![npm](https://img.shields.io/npm/v/caramel-puppy)
 ![npm](https://img.shields.io/npm/dw/caramel-puppy)
 ![GitHub](https://img.shields.io/github/license/gsbenevides2/caramelPuppy)
-[![Build Status](https://travis-ci.org/gsbenevides2/caramelPuppy.svg?branch=master)](https://travis-ci.org/gsbenevides2/caramelPuppy)
+[![Build Status](https://travis-ci.com/gsbenevides2/caramelPuppy.svg?branch=master)](https://travis-ci.org/gsbenevides2/caramelPuppy)
 
 
 CaramelPuppy is an intelligent log manager, it allows to save the logs in a caramelPuppy.json file in the project root.  Integration with express and credential protected web interface for log viewing.
